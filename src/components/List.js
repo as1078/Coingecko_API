@@ -1,9 +1,9 @@
 import React from 'react';
-import ListElement from "./ListElement"
+import Button from "./Button"
+import {Link} from "react-router-dom";
 
 const List = props => (
     <div>
-        
         <h1>
             Directory
         </h1>    
@@ -28,7 +28,7 @@ const List = props => (
                                     <td><a href={obj.url}>{obj.url}</a></td>
                                     <td>{obj.trust_score_rank}</td>
                                     <td><button className="exchange_buttons">
-                                        Exchange</button></td>
+                                        <Link to={{pathname: `/crypexchange/${obj.id}`}}>Exchange</Link></button></td>
                                 </tr>
                             </tbody>
                         </table> 
@@ -40,21 +40,3 @@ const List = props => (
 );
 
 export default List;
-
-//<ListElement getData={props.getData}/>
-/*
-{props.getData.map((obj)=>{
-                    return(
-                        <div>
-                            <p key={obj.id}>{obj.name},
-                            {obj.country},
-                            {obj.trust_score_rank},
-                            {obj.year_established},
-                            {obj.description}
-                            </p>
-                            <img src={obj.image}/>
-                        </div>
-                        )
-                })}
-                */
-                //name, country, URL, logo, trust rank)
