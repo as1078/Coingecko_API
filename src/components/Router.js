@@ -1,3 +1,4 @@
+// Page with Routes to each Page
 import React from 'react';
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import App from "../App"

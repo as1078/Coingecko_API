@@ -5,7 +5,7 @@ var rootStyle = {
     backgroundColor: 'lightgreen',
     height: '100%'
 }
-let count = 0;
+// Page with Detailed Information on Exchanges
 class CrypExchange extends React.Component{
     state = {
         activeExchange: []
@@ -18,6 +18,7 @@ class CrypExchange extends React.Component{
         const exc = this.state.activeExchange;
         console.log(this.state);
     }
+    // Change the API facebook_url data to make it usable
     componentDidUpdate(){
         const exc = this.state.activeExchange;
         let fb_url = exc.facebook_url;
@@ -27,13 +28,9 @@ class CrypExchange extends React.Component{
             this.setState({activeExchange:exc});
         }
     }    
-        /*let red_url = exc.facebook_url;
-       
-        }*/
     
     render(){
         const exc = this.state.activeExchange;
-            
         return (
             <div className="container" style={rootStyle}>
                 <table class="detailedTable">
