@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 class CrypExchange extends React.Component{
     state = {
@@ -45,6 +46,10 @@ class CrypExchange extends React.Component{
                                     <a href={exc.twitter_handle}>Twitter</a>
                                     <a href={exc.telegram_url}>Telegram</a></td>
                                     <td>{exc.description}</td>
+                                    <td><button className="main_page_buttons">
+                                        <Link to={{pathname: `/`}
+                                    }>Back to Main Page</Link></button></td>
+
                                 </tr>
                             </tbody>
                         </table> 
@@ -57,9 +62,3 @@ class CrypExchange extends React.Component{
 
 
 export default CrypExchange;
-
-/*
-name, country, trust rank, logo, 
-year of establishment, social media links, description, 
-and a back-to-main-page button.
-*/
