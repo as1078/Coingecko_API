@@ -15,7 +15,6 @@ class CrypExchange extends React.Component{
         const api_call = await fetch(`https://api.coingecko.com/api/v3/exchanges/${title}`);
         const data = await api_call.json();
         this.setState({activeExchange:data});
-        const exc = this.state.activeExchange;
         console.log(this.state);
     }
     // Change the API facebook_url data to make it usable

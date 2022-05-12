@@ -20,7 +20,7 @@ const List = props => (
                         <tbody>
                             <tr className="exchange_element">
                                 <td>{obj.name}</td>
-                                <td><img src={obj.image}/></td>
+                                <td><img src={obj.image} alt="Exchange Logo"/></td>
                                 <td>{obj.country}</td>
                                 <td><a href={obj.url}>{obj.url}</a></td>
                                 <td>{obj.trust_score_rank}</td>
