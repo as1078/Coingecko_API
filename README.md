@@ -69,3 +69,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # Coingecko_API
+The App.js file in the source folder renders each component and makes an API call. The components folder consists of List.js, which is used to render the main page, Router.js, which uses React-Router to provide paths for each web page, and CrypExchange.js, which is used for the second page framework. For styling, App.css was used along with some features of React bootstrap.
