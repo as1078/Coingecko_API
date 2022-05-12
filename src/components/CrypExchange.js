@@ -5,20 +5,35 @@ var rootStyle = {
     backgroundColor: 'lightgreen',
     height: '100%'
 }
+let count = 0;
 class CrypExchange extends React.Component{
     state = {
         activeExchange: []
     }
     componentDidMount = async() =>{
-        //const api_call = await fetch(`https://api.coingecko.com/api/v3/exchanges?per_page=10`);
         const title = this.props.location.state.crypexchange;
         const api_call = await fetch(`https://api.coingecko.com/api/v3/exchanges/${title}`);
         const data = await api_call.json();
         this.setState({activeExchange:data});
+        const exc = this.state.activeExchange;
+        console.log(this.state);
     }
+    componentDidUpdate(){
+        const exc = this.state.activeExchange;
+        let fb_url = exc.facebook_url;
+        if(!exc.facebook_url.startsWith('https://www.facebook.com')){
+            fb_url = `https://www.facebook.com/${exc.facebook_url}`
+            exc.facebook_url = fb_url; 
+            this.setState({activeExchange:exc});
+        }
+    }    
+        /*let red_url = exc.facebook_url;
+       
+        }*/
     
     render(){
         const exc = this.state.activeExchange;
+            
         return (
             <div className="container" style={rootStyle}>
                 <table class="detailedTable">
@@ -43,7 +58,6 @@ class CrypExchange extends React.Component{
                                 <td>{exc.year_established}</td>
                                 <td><ul class="socialMedia">
                                     <li><a href={exc.facebook_url}>Facebook</a></li>
-                                    <li><a href={exc.reddit_url}>Reddit</a></li>
                                     <li><a href={`https://twitter.com/${exc.twitter_handle}`}>Twitter</a></li>
                                 </ul></td>
                                 <td>{exc.description}</td>
