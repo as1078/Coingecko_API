@@ -3,9 +3,6 @@ import {Link} from "react-router-dom";
 
 const List = props => (
     <div>
-        <h1 className="title">
-            Directory
-        </h1>
         <table>
             <thead>
                 <tr>
@@ -20,7 +17,7 @@ const List = props => (
                 return(
                     <Fragment>   
                         <tbody>
-                            <tr>
+                            <tr className="exchange_element">
                                 <td>{obj.name}</td>
                                 <td><img src={obj.image}/></td>
                                 <td>{obj.country}</td>

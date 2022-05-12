@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  font-family: "verdana";
+  font-family: Montserrat, Avenir;
 }
 
 .App-logo {
@@ -28,15 +28,34 @@
 .App-link {
   color: #61dafb;
 }
-
+.detailedTable{
+  text-align: center;
+}
+.exchange_buttons{
+  border-radius: 10px;
+  background-color: #7CFC00;
+}
 .title{
   font-weight: bold;
   
 }
-
+table{
+  margin-left: auto;
+  margin-right: auto;
+  
+}
 th, td{
-  border: 1px solid black;
   padding: 10px;
+}
+.socialMedia{
+  list-style: none;
+}
+.exchange_element{
+  border: 1px solid black;
+}
+
+.main_page_buttons{
+  background-color: #61dafb;
 }
 
 @keyframes App-logo-spin {
