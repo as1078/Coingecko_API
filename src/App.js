@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import React, { Component} from 'react';
 import List from "./components/List"
-import Button from "./components/Button"
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 class App extends Component{
   state = {
@@ -24,7 +25,7 @@ class App extends Component{
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="title">Cryptocurrency Exchanges</h1>
+          <h1>Cryptocurrency Exchanges</h1>
         </header> 
         <List exchanges={this.state.objects}/>  
       </div>

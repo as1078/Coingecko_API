@@ -41,10 +41,12 @@ class CrypExchange extends React.Component{
                                     <td>{exc.trust_score_rank}</td>
                                     <td><img src={exc.image} alt={exc.name}></img></td>
                                     <td>{exc.year_established}</td>
-                                    <td><a href={exc.facebook_url}>Facebook</a>
-                                    <a href={exc.reddit_url}>Reddit</a>
-                                    <a href={exc.twitter_handle}>Twitter</a>
-                                    <a href={exc.telegram_url}>Telegram</a></td>
+                                    <td><ul>
+                                    <li><a href={exc.facebook_url}>Facebook</a></li>
+                                    <li><a href={exc.reddit_url}>Reddit</a></li>
+                                    <li><a href={exc.twitter_handle}>Twitter</a></li>
+                                    <li><a href={exc.telegram_url}>Telegram</a></li>
+                                    </ul></td>
                                     <td>{exc.description}</td>
                                     <td><button className="main_page_buttons">
                                         <Link to={{pathname: `/`}

@@ -1,10 +1,9 @@
 import React, {Fragment} from 'react';
-import Button from "./Button"
 import {Link} from "react-router-dom";
 
 const List = props => (
     <div>
-        <h1>
+        <h1 className="title">
             Directory
         </h1>
         <table>
