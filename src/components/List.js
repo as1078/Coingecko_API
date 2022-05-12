@@ -28,7 +28,9 @@ const List = props => (
                                     <td><a href={obj.url}>{obj.url}</a></td>
                                     <td>{obj.trust_score_rank}</td>
                                     <td><button className="exchange_buttons">
-                                        <Link to={{pathname: `/crypexchange/${obj.id}`}}>Exchange</Link></button></td>
+                                        <Link to={{pathname: `/crypexchange/${obj.id}`,
+                                        state:{crypexchange: obj.id}}
+                                    }>Exchange</Link></button></td>
                                 </tr>
                             </tbody>
                         </table> 
